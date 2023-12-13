@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <string.h>
 
 
 /**
@@ -41,6 +43,10 @@ typedef struct instruction_s
 /* Opcodes and Functions */
 void execute_bytecode(
 	const char *filename,
+	stack_t **stack,
+	instruction_t *opcodes);
+void parse_instructions(
+	FILE *file, 
 	stack_t **stack,
 	instruction_t *opcodes);
 void push(stack_t **stack, unsigned int line_number);

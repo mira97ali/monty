@@ -15,11 +15,9 @@ void execute_bytecode(
 	stack_t **stack,
 	instruction_t *opcodes)
 {
-	FILE *file = fopen(filename, "r");
-	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
-	unsigned int line_number = 0;
+	FILE *file;
+
+	file = fopen(filename, "r");
 
 	if (file == NULL)
 	{
@@ -27,30 +25,7 @@ void execute_bytecode(
 		exit(EXIT_FAILURE);
 	}
 
-	while ((read = getline(&line, &len, file)) != -1)
-	{
-		line_number++;
+	parse_instructions(file, stack, opcodes);
 
-		int i;
-
-		for (i = 0; opcodes[i].opcode != NULL; i++)
-		{
-			if (strncmp(line, opcodes[i].opcode, strlen(opcodes[i].opcode)) == 0)
-			{
-				opcodes[i].f(stack, line_number);
-				break;
-			}
-		}
-
-		if (opcodes[i].opcode == NULL)
-		{
-			fprintf(stderr, "L%u: unknown instruction %s", line_number, line);
-			free(line);
-			fclose(file);
-			exit(EXIT_FAILURE);
-		}
-	}
-
-	free(line);
 	fclose(file);
 }

@@ -1,11 +1,39 @@
-#ifndef MONTY
-#define MONTY
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <sys/types.h>
-#include <string.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <ctype.h>
+
+
+/**
+ * struct MontyData - structure to hold data for the Monty interpreter.
+ * @lifo: LIFO mode indicator.
+ * @cont: Line number counter.
+ * @arg: Argument for the current operation.
+ * @head: Pointer to the head of the linked list.
+ * @fd: File descriptor for Monty file.
+ * @buffer: Buffer for reading lines from the file.
+ *
+ * Description: this structure encapsulates data elements
+ * for the Monty interpreter,
+ * providing a convenient way to organize and pass around
+ * information related to the program's state.
+ */
+
+typedef struct MontyData
+{
+	int lifo;
+	unsigned int cont;
+	char *arg;
+	stack_t *head;
+	FILE *fd;
+	char *buffer;
+} MontyData;
 
 
 /**
@@ -25,7 +53,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -41,23 +68,29 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+void op_push(stack_t **stack, unsigned int line_number);
+void op_pall(stack_t **stack, unsigned int line_number);
+void op_pint(stack_t **stack, unsigned int line_number);
+void op_pop(stack_t **stack, unsigned int line_number);
+void op_swap(stack_t **stack, unsigned int line_number);
+void op_add(stack_t **stack, unsigned int line_number);
+void op_nop(stack_t **stack, unsigned int line_number);
 
-/* Functions */
-void execute_bytecode(
-	const char *filename,
-	stack_t **stack,
-	instruction_t *opcodes);
-void parse_instructions(
-	FILE * file,
-	stack_t **stack,
-	instruction_t *opcodes);
+void (*get_opcode_function(char *opcode))(stack_t **, unsigned int);
 
-/* Opcodes */
-void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
+int str_contains(char *s, char c);
+char *tokenize_string(char *s, char *delimiters);
+void *reallocate_memory(void *ptr, size_t old_size, size_t new_size);
+void *allocate_memory(size_t size);
+int string_compare(char *s1, char *s2);
 
-/* Helpers */
-int is_numeric(const char *str);
+stack_t *add_node_end(stack_t **head, const int n);
+stack_t *add_node(stack_t **head, const int n);
+void free_list(stack_t *head);
+
+void free_data(stack_t *head, FILE *fd, char *buffer);
+void initialize_data(int *lifo, unsigned int *cont, char **arg,
+					stack_t **head, FILE **fd, char **buffer);
+FILE *validate_input(int argc, char *argv[]);
 
 #endif

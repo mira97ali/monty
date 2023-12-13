@@ -8,10 +8,14 @@
 
 int is_numeric(const char *str)
 {
+	int i;
+
 	if (str == NULL || *str == '\0' || *str == '\n')
 		return (0);
 
-	for (int i = 0; str[i] != '\0'; i++)
+	i = 0;
+
+	for (; str[i] != '\0'; i++)
 	{
 		if (!isdigit(str[i]) && (i == 0 && str[i] != '-' && str[i] != '+'))
 			return (0);

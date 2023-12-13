@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <string.h>
+#include <ctype.h>
 
 
 /**
@@ -40,17 +41,19 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/* Opcodes and Functions */
+/* Functions */
 void execute_bytecode(
 	const char *filename,
 	stack_t **stack,
 	instruction_t *opcodes);
 void parse_instructions(
-	FILE *file, 
+	FILE * file,
 	stack_t **stack,
 	instruction_t *opcodes);
+
+/* Opcodes */
 void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack);
 
 /* Helpers */
 int is_numeric(const char *str);

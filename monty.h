@@ -69,6 +69,7 @@ typedef struct MontyData
 	char *buffer;
 } MontyData;
 
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);

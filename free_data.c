@@ -10,7 +10,7 @@
  */
 void free_data(stack_t *head, FILE *fd, char *buffer)
 {
-	free_dlistint(head);
+	free_list(head);
 	free(buffer);
 	fclose(fd);
 }

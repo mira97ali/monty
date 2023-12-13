@@ -11,6 +11,7 @@
 void *reallocate_memory(void *ptr, size_t old_size, size_t new_size)
 {
 	void *new_ptr;
+	size_t i;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -36,13 +37,13 @@ void *reallocate_memory(void *ptr, size_t old_size, size_t new_size)
 
 	if (new_size > old_size)
 	{
-		for (size_t i = 0; i < old_size; i++)
+		for (i = 0; i < old_size; i++)
 			((char *)new_ptr)[i] = ((char *)ptr)[i];
 		free(ptr);
 	}
 	else
 	{
-		for (size_t i = 0; i < new_size; i++)
+		for (i = 0; i < new_size; i++)
 			((char *)new_ptr)[i] = ((char *)ptr)[i];
 		free(ptr);
 	}

@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 {
 	MontyData data;
 	FILE *file;
+	char *opcode;
+	size_t bufsize;
 
 	file = validate_input(argc, argv);
 	initialize_data(
@@ -27,8 +29,7 @@ int main(int argc, char *argv[])
 		&data.buffer
 	);
 
-	char *opcode;
-	size_t bufsize = 0;
+	bufsize = 0;
 
 	while (getline(&data.buffer, &bufsize, data.fd) != -1)
 	{

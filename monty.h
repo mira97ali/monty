@@ -8,32 +8,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <ctype.h>
-
-
-/**
- * struct MontyData - structure to hold data for the Monty interpreter.
- * @lifo: LIFO mode indicator.
- * @cont: Line number counter.
- * @arg: Argument for the current operation.
- * @head: Pointer to the head of the linked list.
- * @fd: File descriptor for Monty file.
- * @buffer: Buffer for reading lines from the file.
- *
- * Description: this structure encapsulates data elements
- * for the Monty interpreter,
- * providing a convenient way to organize and pass around
- * information related to the program's state.
- */
-
-typedef struct MontyData
-{
-	int lifo;
-	unsigned int cont;
-	char *arg;
-	stack_t *head;
-	FILE *fd;
-	char *buffer;
-} MontyData;
+#include <string.h>
 
 
 /**
@@ -67,6 +42,33 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
+/**
+ * struct MontyData - structure to hold data for the Monty interpreter.
+ * @lifo: LIFO mode indicator.
+ * @cont: Line number counter.
+ * @arg: Argument for the current operation.
+ * @head: Pointer to the head of the linked list.
+ * @fd: File descriptor for Monty file.
+ * @buffer: Buffer for reading lines from the file.
+ *
+ * Description: this structure encapsulates data elements
+ * for the Monty interpreter,
+ * providing a convenient way to organize and pass around
+ * information related to the program's state.
+ */
+
+typedef struct MontyData
+{
+	int lifo;
+	unsigned int cont;
+	char *arg;
+	stack_t *head;
+	FILE *fd;
+	char *buffer;
+} MontyData;
+
 
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);

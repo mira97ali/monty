@@ -10,6 +10,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	char *token;
 	int value;
+	stack_t *new_node;
 
 	token = strtok(NULL, " \t\n");
 
@@ -21,12 +22,11 @@ void push(stack_t **stack, unsigned int line_number)
 
 	value = atoi(token);
 
-	stack_t *new_node = malloc(sizeof(stack_t));
+	new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		free(new_node);
 		exit(EXIT_FAILURE);
 	}
 
@@ -38,5 +38,4 @@ void push(stack_t **stack, unsigned int line_number)
 		(*stack)->prev = new_node;
 
 	*stack = new_node;
-	free(new_node);
 }

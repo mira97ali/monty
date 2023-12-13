@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		opcode = tokenize_string(data.buffer, " \t\n");
 		if (opcode && opcode[0] != '#')
 		{
-			get_opcode_function(opcode)(&data.head, data.cont);
+			get_op(opcode)(&(data.head), &data, data.cont);
 		}
 	}
 

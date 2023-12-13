@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * get_opcode_function - Returns the function pointer for the given opcode.
+ * get_op - Returns the function pointer for the given opcode.
  * @opcode: The opcode to search for.
  * Return: Function pointer to the opcode's corresponding function.
  */
-void (*get_opcode_function(char *opcode))(stack_t **, unsigned int)
+void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 {
 	instruction_t opcodes[] = {
 		{"push", op_push},

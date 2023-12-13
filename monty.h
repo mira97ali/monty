@@ -71,15 +71,15 @@ typedef struct MontyData
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pall(stack_t **stack, unsigned int line_number);
-void op_pint(stack_t **stack, unsigned int line_number);
-void op_pop(stack_t **stack, unsigned int line_number);
-void op_swap(stack_t **stack, unsigned int line_number);
-void op_add(stack_t **stack, unsigned int line_number);
-void op_nop(stack_t **stack, unsigned int line_number);
+void op_push(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_pall(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_pint(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_pop(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_swap(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_add(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_nop(stack_t **stack, MontyData *data, unsigned int line_number);
 
-void (*get_opcode_function(char *opcode))(stack_t **, unsigned int);
+void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int);
 
 int str_contains(char *s, char c);
 char *tokenize_string(char *s, char *delimiters);

@@ -3,13 +3,15 @@
 /**
  * op_pall - Prints all values on the stack.
  * @stack: Pointer to the head of the stack.
+ * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
  */
-void op_pall(stack_t **stack, unsigned int line_number)
+void op_pall(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	stack_t *current = *stack;
 
 	(void)line_number;
+	(void)data;
 
 	while (current)
 	{

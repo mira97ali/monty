@@ -13,14 +13,20 @@
 
 int main(int argc, char *argv[])
 {
+	stack_t *stack = NULL;
+	instruction_t opcodes[] = {
+		{"push", push},
+		{"pall", pall},
+		{NULL, NULL}
+	};
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: %s file\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 
-	execute_bytecode(argv[1]);
+	execute_bytecode(argv[1], &stack, opcodes);
 
 	return (0);
 }
-

@@ -7,8 +7,12 @@
  */
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 {
-	instruction_t opcodes[] = {
-		{"push", op_push},
+	struct
+	{
+		char *opcode;
+		void (*f)(stack_t **, MontyData *, unsigned int);
+	} opcodes[] = {
+		{"push", (void (*)(stack_t **, MontyData *, unsigned int))op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},
 		{"pop", op_pop},
@@ -23,9 +27,12 @@ void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 	while (opcodes[i].opcode != NULL)
 	{
 		if (string_compare(opcodes[i].opcode, opcode) == 0)
+		{
 			return (opcodes[i].f);
+		}
 		i++;
 	}
 
 	return (NULL);
 }
+

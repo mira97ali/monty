@@ -41,6 +41,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+
 /* Functions */
 void execute_bytecode(
 	const char *filename,

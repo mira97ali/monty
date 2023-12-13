@@ -11,10 +11,12 @@
 void free_data(stack_t *head, FILE *fd, char *buffer)
 {
 	free_list(head);
-	if (buffer != NULL) {
-        free(buffer);
-    }
-	if (fd != NULL) {
-        fclose(fd);
-    }
+	if (buffer != NULL)
+	{
+		free(buffer);
+	}
+	if (fd != NULL)
+	{
+		fclose(fd);
+	}
 }

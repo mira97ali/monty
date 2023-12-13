@@ -22,7 +22,8 @@ void initialize_data(int *lifo, unsigned int *cont, char **arg,
 	*fd = NULL;
 	*buffer = malloc(1024);
 
-	if (*buffer == NULL) {
+	if (*buffer == NULL)
+	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}

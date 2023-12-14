@@ -21,6 +21,7 @@ void check_opcode(char *opcode, int line_number)
 		"mul",
 		"mod",
 		"pchar",
+		"pstr",
 		NULL
 	};
 

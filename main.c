@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
 		opcode = strtok(data.buffer, " \t\n");
 		if (opcode)
 		{
-			check_opcode(opcode, data.cont);
-			if (opcode && opcode[0] != '#')
+			if ((opcode[0] == '#') == 0)
 			{
+				check_opcode(opcode, data.cont);
 				data.arg = strtok(NULL, " \t\n");
 				get_op(opcode)(&(data.head), &data, data.cont);
 			}

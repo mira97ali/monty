@@ -28,5 +28,5 @@ void op_mod(stack_t **stack, MontyData *data, unsigned int line_number)
 	result = (*stack)->next->n % (*stack)->n;
 	(*stack)->next->n = result;
 
-	p_pop(stack, data, line_number);
+	op_pop(stack, data, line_number);
 }

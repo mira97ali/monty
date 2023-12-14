@@ -18,6 +18,7 @@ void check_opcode(char *opcode, int line_number)
 		"nop",
 		"sub",
 		"div",
+		"mul",
 		NULL
 	};
 

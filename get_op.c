@@ -18,6 +18,7 @@ void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 		{"nop", op_nop},
 		{"sub", op_sub},
 		{"div", op_div},
+		{"mul", op_mul},
 		{NULL, NULL}
 	};
 

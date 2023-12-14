@@ -34,13 +34,13 @@ int main(int argc, char *argv[])
 	nlines = 0;
 	while ((nlines = getline(&data.buffer, &bufsize, file)) != -1)
 	{
-		data.cont++;
 		opcode = strtok(data.buffer, " \t\n");
 		if (opcode && opcode[0] != '#')
 		{
 			data.arg = strtok(NULL, " \t\n");
 			get_op(opcode)(&(data.head), &data, data.cont);
 		}
+		data.cont++;
 	}
 
 	free_data(data.head, data.fd, data.buffer);

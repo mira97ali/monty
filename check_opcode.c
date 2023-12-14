@@ -23,6 +23,7 @@ void check_opcode(char *opcode, int line_number)
 		"pchar",
 		"pstr",
 		"rotl",
+		"rotr",
 		NULL
 	};
 

@@ -98,6 +98,7 @@ void op_mod(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_pchar(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_pstr(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_rotl(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_rotr(stack_t **stack, MontyData *data, unsigned int line_number);
 
 void check_opcode(char *opcode, int line_number);
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int);

@@ -20,6 +20,7 @@ void check_opcode(char *opcode, int line_number)
 		"div",
 		"mul",
 		"mod",
+		"pchar",
 		NULL
 	};
 

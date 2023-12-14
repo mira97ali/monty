@@ -95,6 +95,7 @@ void op_sub(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_div(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_mul(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_mod(stack_t **stack, MontyData *data, unsigned int line_number);
+void op_pchar(stack_t **stack, MontyData *data, unsigned int line_number);
 
 void check_opcode(char *opcode, int line_number);
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int);

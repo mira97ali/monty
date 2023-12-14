@@ -8,27 +8,8 @@
  */
 void op_queue(stack_t **stack, MontyData *data, unsigned int line_number)
 {
-	stack_t *temp, *last;
-
+	(void)stack;
 	(void)line_number;
 
-	if (data->lifo == 1 || (*stack && (*stack)->next))
-	{
-		temp = *stack;
-		last = *stack;
-
-		while (last->next)
-			last = last->next;
-
-		*stack = temp->next;
-		if (*stack)
-			(*stack)->prev = NULL;
-
-		temp->next = NULL;
-		temp->prev = last;
-		if (last)
-			last->next = temp;
-
-		data->lifo = 0;
-	}
+	data->lifo = 0;
 }

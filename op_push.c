@@ -35,7 +35,7 @@ void op_push(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	char *arg = data->arg;
 
-	if (!arg || !is_number(*arg))
+	if (!arg || !is_number(arg))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		free_data(*stack, data->fd, data->buffer);

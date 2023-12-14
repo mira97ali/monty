@@ -22,6 +22,7 @@ void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 		{"mod", op_mod},
 		{"pchar", op_pchar},
 		{"pstr", op_pstr},
+		{"rotl", op_rotl},
 		{NULL, NULL}
 	};
 

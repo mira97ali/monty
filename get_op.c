@@ -8,11 +8,7 @@
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 {
 	int i;
-	struct
-	{
-		char *opcode;
-		void (*f)(stack_t **, MontyData *, unsigned int);
-	} opcodes[] = {
+	opcode_func_t opcodes[] = {
 		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},

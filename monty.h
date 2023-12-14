@@ -10,7 +10,6 @@
 #include <ctype.h>
 #include <string.h>
 
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -43,7 +42,6 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
 /**
  * struct MontyData - structure to hold data for the Monty interpreter.
  * @lifo: LIFO mode indicator.
@@ -68,6 +66,21 @@ typedef struct MontyData
 	FILE *fd;
 	char *buffer;
 } MontyData;
+
+/**
+ * struct opcode_func - Structure for opcode and function mapping.
+ * @opcode: String representing the opcode.
+ * @f: Function pointer for the corresponding opcode function.
+ *
+ * Description: This structure maps an opcode string to its corresponding
+ * function. This mapping is used to dynamically call the correct function
+ * based on the given opcode.
+ */
+typedef struct opcode_func
+{
+	char *opcode;
+	void (*f)(stack_t **, MontyData *, unsigned int);
+} opcode_func_t;
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 

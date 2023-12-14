@@ -11,6 +11,7 @@ void op_pstr(stack_t **stack, MontyData *data, unsigned int line_number)
 	stack_t *current = *stack;
 
 	(void)data;
+	(void)line_number;
 
 	while (current && current->n != 0 && (current->n >= 0 && current->n <= 127))
 	{

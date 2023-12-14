@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 	while ((nlines = getline(&data.buffer, &bufsize, file)) != -1)
 	{
 		opcode = strtok(data.buffer, " \t\n");
+		check_opcode(opcode, data.cont);
 		if (opcode && opcode[0] != '#')
 		{
 			data.arg = strtok(NULL, " \t\n");

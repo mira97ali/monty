@@ -92,6 +92,7 @@ void op_swap(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_add(stack_t **stack, MontyData *data, unsigned int line_number);
 void op_nop(stack_t **stack, MontyData *data, unsigned int line_number);
 
+void check_opcode(char *opcode, int line_number);
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int);
 
 int str_contains(char *s, char c);

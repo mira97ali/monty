@@ -33,4 +33,3 @@ void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 
 	return (NULL);
 }
-

@@ -24,6 +24,8 @@ void check_opcode(char *opcode, int line_number)
 		"pstr",
 		"rotl",
 		"rotr",
+		"stack",
+		"queue",
 		NULL
 	};
 

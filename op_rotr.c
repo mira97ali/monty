@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_rotr - Shifts the stack elements downward, rotating to the bottom.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

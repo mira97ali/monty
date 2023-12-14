@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * is_number - Verifies if a string is a valid number.
  * @str: The string to be checked.
  *

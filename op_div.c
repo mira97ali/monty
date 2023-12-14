@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_div - Divides the second top element of the stack by the top element.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

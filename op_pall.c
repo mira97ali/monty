@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_pall - Displays all values on the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

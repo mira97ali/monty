@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * validate_input - Verifies the input arguments and file for validity.
  *
  * @argc: Argument count.

@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * reallocate_memory - Adjusts the memory allocation for a node.
  *
  * @ptr: Pointer to the old memory.

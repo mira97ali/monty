@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_rotl - Rotates the stack to the top.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

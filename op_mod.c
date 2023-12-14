@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_mod - Computes the remainder of the division of the second top element
  *          of the stack by the top element.
  * @stack: Pointer to the head of the stack.

@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * free_data - Releases allocated data and closes the file
  *
  * @head: Pointer to the stack linked list

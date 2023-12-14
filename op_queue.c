@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_queue - Configures the data format as a queue (FIFO).
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

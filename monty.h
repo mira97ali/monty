@@ -10,7 +10,7 @@
 #include <ctype.h>
 #include <string.h>
 
-/*
+/**
  * struct stack_s - Doubly linked list representation of a stack (or queue)
  * @n: Integer value stored in the node
  * @prev: Points to the previous element of the stack (or queue)
@@ -28,7 +28,7 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-/*
+/**
  * struct instruction_s - Opcode and its corresponding function
  * @opcode: The opcode
  * @f: Function to handle the opcode
@@ -44,7 +44,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/*
+/**
  * struct MontyData - Structure to store data for the Monty interpreter.
  * @lifo: LIFO mode indicator.
  * @cont: Line number counter.
@@ -72,12 +72,13 @@ typedef struct MontyData
 
 /**
  * struct opcode_func - Structure for opcode and function mapping.
- * @opcode: String representing the opcode.
+ * @opcode: String that represents the opcode.
  * @f: Function pointer for the corresponding opcode function.
  *
  * Description: This structure maps an opcode string to its corresponding
  * function. This mapping is used to dynamically call the correct function
  * based on the given opcode.
+ * Author: Amira
  */
 typedef struct opcode_func
 {

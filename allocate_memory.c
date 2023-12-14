@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * allocate_memory - Reserves memory for a new node.
  *
  * @size: Size of the memory to be allocated.

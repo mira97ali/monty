@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_stack - Configures the data format as a stack (LIFO).
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

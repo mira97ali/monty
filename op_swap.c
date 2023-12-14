@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_swap - Exchanges the positions of the top two elements in the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

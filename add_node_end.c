@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/* 
+/**
  * add_node_end - Inserts a new node at the end of the stack
  *
  * @head: Double pointer to the stack's linked list

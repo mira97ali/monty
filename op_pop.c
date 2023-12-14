@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_pop - Deletes the top element of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_nop - Performs no operation.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

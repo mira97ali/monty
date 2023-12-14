@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * free_list - Releases memory occupied by a stack linked list
  *
  * @head: Pointer to the stack linked list

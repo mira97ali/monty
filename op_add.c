@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_add - Adds the top two elements of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

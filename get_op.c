@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * get_op - Retrieves the function pointer for the given opcode.
  * @opcode: The opcode to search for.
  * Return: Function pointer to the opcode's corresponding function.

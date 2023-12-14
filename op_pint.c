@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * op_pint - Displays the value at the top of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.

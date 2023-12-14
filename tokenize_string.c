@@ -1,7 +1,7 @@
 #include "monty.h"
 
-/*
- * tokenize_string - Breaks down a string into tokens using specified delimiters.
+/**
+ * tokenize_string - Breaks down a string into tokens using delimiters.
  *
  * @s: String to tokenize.
  * @delimiters: Delimiters to use for tokenization.

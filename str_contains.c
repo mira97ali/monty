@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * str_contains - Verifies if a string contains a specific character.
  *
  * @s: The string to check.

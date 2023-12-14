@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * check_opcode - Verifies the validity of the given opcode.
  * @opcode: The opcode to search for.
  * @line_number: Line number of the instruction.

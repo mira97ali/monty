@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * string_compare - Determines the relationship between two strings.
  *
  * @s1: First string to be compared.

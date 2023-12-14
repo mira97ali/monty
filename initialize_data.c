@@ -1,6 +1,6 @@
 #include "monty.h"
 
-/*
+/**
  * initialize_data - Sets up global variables for Monty interpreter.
  * @lifo: LIFO mode indicator.
  * @cont: Line number counter.

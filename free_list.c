@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * free_list - Frees a stack linked list
+/*
+ * free_list - Releases memory occupied by a stack linked list
  *
  * @head: Pointer to the stack linked list
  * Return: No return value
+ * Author: Amira
  */
+
 void free_list(stack_t *head)
 {
 	stack_t *temp;

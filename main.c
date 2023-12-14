@@ -1,17 +1,19 @@
 #include "monty.h"
 
 
-/**
- * main - Entry point for the Monty interpreter.
+/*
+ * main - Starting point for the Monty interpreter.
  * @argc: Number of command-line arguments.
  * @argv: Array of command-line argument strings.
  *
- * This function orchestrates the execution of the Monty interpreter. It
+ * This function manages the execution of the Monty interpreter. It
  * validates input, initializes data structures, processes each line of the
  * Monty file, and performs memory cleanup upon completion.
  *
  * Return: 0 on successful execution.
+ * Author: Amira
  */
+
 int main(int argc, char *argv[])
 {
 	MontyData data;

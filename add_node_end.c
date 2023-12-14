@@ -1,12 +1,14 @@
 #include "monty.h"
 
-/**
- * add_node_end - Adds a new node to the end of the stack
+/* 
+ * add_node_end - Inserts a new node at the end of the stack
  *
- * @head: Pointer to the pointer to the stack linked list
- * @n: Value to be added to the new node
- * Return: Pointer to the new node
+ * @head: Double pointer to the stack's linked list
+ * @n: Value to be stored in the new node
+ * Author: Amira.
+ * Return: Pointer to the newly added node
  */
+
 stack_t *add_node_end(stack_t **head, const int n)
 {
 	stack_t *new_node, *temp;

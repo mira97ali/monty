@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * allocate_memory - Allocates memory for a new node.
+/*
+ * allocate_memory - Reserves memory for a new node.
  *
  * @size: Size of the memory to be allocated.
  * Return: Pointer to the allocated memory.
+ * Author: Amira
  */
+
 void *allocate_memory(size_t size)
 {
 	void *ptr;

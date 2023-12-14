@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_swap - Swaps the top two elements of the stack.
+/*
+ * op_swap - Exchanges the positions of the top two elements in the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_swap(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	int temp;

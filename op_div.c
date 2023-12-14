@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
+/*
  * op_div - Divides the second top element of the stack by the top element.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_div(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	int result;

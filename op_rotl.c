@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
+/*
  * op_rotl - Rotates the stack to the top.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_rotl(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	stack_t *first, *last;

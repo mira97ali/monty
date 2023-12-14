@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
+/*
  * op_mul - Multiplies the first two elements of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_mul(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	int result;

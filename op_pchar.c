@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_pchar - Prints the char at the top of the stack.
+/*
+ * op_pchar - Displays the character at the top of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_pchar(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	if (!stack || !*stack)

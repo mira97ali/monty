@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_pop - Removes the top element of the stack.
+/*
+ * op_pop - Deletes the top element of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_pop(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	stack_t *temp;

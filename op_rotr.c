@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_rotr - Rotates the stack to the bottom.
+/*
+ * op_rotr - Shifts the stack elements downward, rotating to the bottom.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_rotr(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	stack_t *first, *last;

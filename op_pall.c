@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_pall - Prints all values on the stack.
+/*
+ * op_pall - Displays all values on the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_pall(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	stack_t *current = *stack;

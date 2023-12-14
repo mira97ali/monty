@@ -1,10 +1,12 @@
 #include "monty.h"
 
-/**
- * get_op - Returns the function pointer for the given opcode.
+/*
+ * get_op - Retrieves the function pointer for the given opcode.
  * @opcode: The opcode to search for.
  * Return: Function pointer to the opcode's corresponding function.
+ * Author: Amira
  */
+
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 {
 	int i;

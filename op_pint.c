@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_pint - Prints the value at the top of the stack.
+/*
+ * op_pint - Displays the value at the top of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_pint(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)

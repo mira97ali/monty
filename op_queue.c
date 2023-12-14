@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * op_queue - Sets the format of the data to a queue (FIFO).
+/*
+ * op_queue - Configures the data format as a queue (FIFO).
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_queue(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	(void)stack;

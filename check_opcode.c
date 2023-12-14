@@ -1,10 +1,12 @@
 #include "monty.h"
 
-/**
- * check_opcode - Checks if the given opcode is valid.
+/*
+ * check_opcode - Verifies the validity of the given opcode.
  * @opcode: The opcode to search for.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void check_opcode(char *opcode, int line_number)
 {
 	int i;

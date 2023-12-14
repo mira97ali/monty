@@ -10,14 +10,15 @@
 #include <ctype.h>
 #include <string.h>
 
-/**
- * struct stack_s - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prev: points to the previous element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
+/*
+ * struct stack_s - Doubly linked list representation of a stack (or queue)
+ * @n: Integer value stored in the node
+ * @prev: Points to the previous element of the stack (or queue)
+ * @next: Points to the next element of the stack (or queue)
  *
- * Description: doubly linked list node structure
+ * Description: Doubly linked list node structure
  * for stack, queues, LIFO, FIFO
+ * Author: Amira
  */
 
 typedef struct stack_s
@@ -27,13 +28,14 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-/**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+/*
+ * struct instruction_s - Opcode and its corresponding function
+ * @opcode: The opcode
+ * @f: Function to handle the opcode
  *
- * Description: opcode and its function
+ * Description: Structure representing opcode and its function
  * for stack, queues, LIFO, FIFO
+ * Author: Amira
  */
 
 typedef struct instruction_s
@@ -42,8 +44,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/**
- * struct MontyData - structure to hold data for the Monty interpreter.
+/*
+ * struct MontyData - Structure to store data for the Monty interpreter.
  * @lifo: LIFO mode indicator.
  * @cont: Line number counter.
  * @arg: Argument for the current operation.
@@ -51,10 +53,11 @@ typedef struct instruction_s
  * @fd: File descriptor for Monty file.
  * @buffer: Buffer for reading lines from the file.
  *
- * Description: this structure encapsulates data elements
+ * Description: This structure encapsulates data elements
  * for the Monty interpreter,
  * providing a convenient way to organize and pass around
  * information related to the program's state.
+ * Author: Amira
  */
 
 typedef struct MontyData

@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
-* op_sub - Subtracts the top element of the stack from the second top element.
-* @stack: Pointer to the head of the stack.
-* @data: MontyData structure containing necessary information.
-* @line_number: Line number of the instruction.
-*/
+/*
+ * op_sub - Deducts the second top element of the stack from the top element.
+ * @stack: Pointer to the head of the stack.
+ * @data: MontyData structure containing necessary information.
+ * @line_number: Line number of the instruction.
+ * Author: Amira
+ */
+
 void op_sub(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	int result;

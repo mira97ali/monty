@@ -1,13 +1,15 @@
 #include "monty.h"
 
-/**
- * reallocate_memory - Reallocates memory for a node.
+/*
+ * reallocate_memory - Adjusts the memory allocation for a node.
  *
  * @ptr: Pointer to the old memory.
  * @old_size: Old size of the memory.
  * @new_size: New size of the memory.
  * Return: Pointer to the reallocated memory.
+ * Author: Amira
  */
+
 void *reallocate_memory(void *ptr, size_t old_size, size_t new_size)
 {
 	void *new_ptr;

@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
- * is_number - Check if a string is a valid number.
- * @str: The string that we need to check.
+/*
+ * is_number - Verifies if a string is a valid number.
+ * @str: The string to be checked.
  *
- * Return: 1 if the string is integer, othewise it's 0
+ * Return: 1 if the string is an integer, otherwise it's 0.
+ * Author: Amira
  */
+
 int is_number(char *str)
 {
 	if (*str == '-')

@@ -1,11 +1,13 @@
 #include "monty.h"
 
-/**
+/*
  * op_add - Adds the top two elements of the stack.
  * @stack: Pointer to the head of the stack.
  * @data: MontyData structure containing necessary information.
  * @line_number: Line number of the instruction.
+ * Author: Amira
  */
+
 void op_add(stack_t **stack, MontyData *data, unsigned int line_number)
 {
 	int sum;
@@ -18,6 +20,6 @@ void op_add(stack_t **stack, MontyData *data, unsigned int line_number)
 	}
 
 	sum = (*stack)->n + (*stack)->next->n;
-	op_pop(stack, data, line_number);  /* Pop the top element */
+	op_pop(stack, data, line_number);
 	(*stack)->n = sum;
 }

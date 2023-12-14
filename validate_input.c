@@ -1,12 +1,14 @@
 #include "monty.h"
 
-/**
- * validate_input - Validate the input arguments and file
+/*
+ * validate_input - Verifies the input arguments and file for validity.
  *
- * @argc: Argument count
- * @argv: Argument vector
- * Return: FILE pointer to the opened file
+ * @argc: Argument count.
+ * @argv: Argument vector.
+ * Return: FILE pointer to the opened file.
+ * Author: Amira
  */
+
 FILE *validate_input(int argc, char *argv[])
 {
 	FILE *fd;

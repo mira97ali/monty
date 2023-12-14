@@ -1,12 +1,14 @@
 #include "monty.h"
 
-/**
- * tokenize_string - Tokenizes a string based on delimiters.
+/*
+ * tokenize_string - Breaks down a string into tokens using specified delimiters.
  *
  * @s: String to tokenize.
  * @delimiters: Delimiters to use for tokenization.
  * Return: A null-terminated string containing the tokens separated by space.
+ * Author: Amira
  */
+
 char *tokenize_string(char *s, char *delimiters)
 {
 	char *token;

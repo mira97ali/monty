@@ -25,6 +25,6 @@ void check_opcode(char *opcode, int line_number)
 			return;
 	}
 
-	printf("L%d: unknown instruction %s\n", line_number, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }

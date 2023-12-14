@@ -7,12 +7,13 @@
  */
 void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 {
+	int i;
 	struct
 	{
 		char *opcode;
 		void (*f)(stack_t **, MontyData *, unsigned int);
 	} opcodes[] = {
-		{"push", (void (*)(stack_t **, MontyData *, unsigned int))op_push},
+		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},
 		{"pop", op_pop},
@@ -22,7 +23,8 @@ void (*get_op(char *opcode))(stack_t **, MontyData *, unsigned int)
 		{NULL, NULL}
 	};
 
-	int i = 0;
+
+	i = 0;
 
 	while (opcodes[i].opcode != NULL)
 	{

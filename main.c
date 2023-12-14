@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	FILE *file;
 	char *opcode;
 	size_t bufsize;
+	ssize_t nlines;
 
 	file = validate_input(argc, argv);
 	initialize_data(
@@ -29,14 +30,15 @@ int main(int argc, char *argv[])
 		&data.buffer
 	);
 
-	bufsize = 0;
-
-	while (getline(&data.buffer, &bufsize, data.fd) != -1)
+	bufsize = 256;
+	nlines = 0;
+	while ((nlines = getline(&data.buffer, &bufsize, file)) != -1)
 	{
 		data.cont++;
-		opcode = tokenize_string(data.buffer, " \t\n");
+		opcode = strtok(data.buffer, " \t\n");
 		if (opcode && opcode[0] != '#')
 		{
+			data.arg = strtok(NULL, " \t\n");
 			get_op(opcode)(&(data.head), &data, data.cont);
 		}
 	}

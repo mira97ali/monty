@@ -27,6 +27,7 @@ stack_t *add_node_end(stack_t **head, const int n)
 	if (!*head)
 	{
 		new_node->prev = NULL;
+		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
@@ -35,8 +36,9 @@ stack_t *add_node_end(stack_t **head, const int n)
 	while (temp->next)
 		temp = temp->next;
 
-	temp->next = new_node;
+	new_node->next = temp->next;
 	new_node->prev = temp;
+	temp->next = new_node;
 
-	return (new_node);
+	return (temp->next);
 }

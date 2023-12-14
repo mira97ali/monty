@@ -12,7 +12,7 @@ void op_queue(stack_t **stack, MontyData *data, unsigned int line_number)
 
 	(void)line_number;
 
-	if (data->lifo == 0 || (*stack && (*stack)->next))
+	if (data->lifo == 1 || (*stack && (*stack)->next))
 	{
 		temp = *stack;
 		last = *stack;
